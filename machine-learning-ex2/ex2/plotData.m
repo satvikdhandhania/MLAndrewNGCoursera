@@ -13,7 +13,11 @@ figure; hold on;
 %
 
 
+New1_X = find(y==1);
+New2_X = find(y==0);
 
+plot(X(New1_X,1), X(New1_X,2), 'k+',"linewidth",2, 'markersize',7);
+plot(X(New2_X,1), X(New2_X,2), 'ko', "markerfacecolor", 'y', 'markersize',7);
 
 
 

@@ -43,7 +43,7 @@ ylabel('Exam 2 score')
 
 % Specified in plot order
 legend('Admitted', 'Not admitted')
-hold off;
+%hold off;
 
 fprintf('\nProgram paused. Press enter to continue.\n');
 pause;
@@ -84,6 +84,7 @@ fprintf('Expected gradients (approx):\n 0.043\n 2.566\n 2.647\n');
 
 fprintf('\nProgram paused. Press enter to continue.\n');
 pause;
+
 
 
 %% ============= Part 3: Optimizing using fminunc  =============
