@@ -63,14 +63,17 @@ Theta2_grad = zeros(size(Theta2));
 %
 
 
+z2 = [ones(size(X,1),1) X] * Theta1';
+a2 = sigmoid(z2);
 
+z3 = [ones(size(a2,1),1) a2] * Theta2';
+a3 = sigmoid(z3);
 
-
-
-
-
-
-
+for k =1:num_labels
+yk = y==k;
+htheta = a3(:,k);
+J = J - (1/m)* sum((yk).*log(htheta) + (1-yk).*log(1-htheta));
+end
 
 
 
