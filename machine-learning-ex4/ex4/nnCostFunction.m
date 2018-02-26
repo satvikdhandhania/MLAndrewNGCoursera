@@ -75,6 +75,8 @@ htheta = a3(:,k);
 J = J - (1/m)* sum((yk).*log(htheta) + (1-yk).*log(1-htheta));
 end
 
+%regularization
+J =  J + lambda/(2*m)*(sum(sum(Theta1(:,2:end).^2))+sum(sum(Theta2(:,2:end).^2))); 
 
 
 
