@@ -13,8 +13,8 @@ g = zeros(size(z));
 %               each value of z (z can be a matrix, vector or scalar).
 
 
-
-
+sigZ = sigmoid(z);
+g = sigZ.*(1-sigZ);
 
 
 
