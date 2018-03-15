@@ -23,6 +23,16 @@ idx = zeros(size(X,1), 1);
 
 
 
+for j = 1:length(X)
+  difference  = inf;
+  for i = 1:K 
+    idist = sum((X(j,:) - centroids(i,:)).^2);
+    if(idist < difference)
+      difference = idist;
+      idx(j) = i;
+    end
+  end
+end
 
 
 
